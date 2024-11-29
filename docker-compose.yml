@@ -8,7 +8,7 @@ services:
     container_name: invoiceshelf_db
     image: postgres:15
     ports:
-      - 5432:5432
+      - 5465:5432
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
@@ -37,7 +37,7 @@ services:
       - APP_URL=http://localhost:90
       - DB_CONNECTION=pgsql
       - DB_HOST=invoiceshelf_db
-      - DB_PORT=5432
+      - DB_PORT=5465
       - DB_DATABASE=invoiceshelf
       - DB_USERNAME=invoiceshelf
       - DB_PASSWORD=somepass
